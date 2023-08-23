@@ -1,0 +1,42 @@
+Todos os testes consideraram o funcionamento atual da API como o funcionamento normal e buscaram cobrir todos os cenários possíveis.
+
+GET
+Dado que não existem usuários cadastrados, quando for acessado o endpoint para todos os clientes, então o status da requisição será 200 e o corpo estará vazio.
+verificar tanto para o / como para o /clientes
+
+Dado que existem usuários cadastrados, quando for acessado o endpoint especificando o ID do cliente, então o status da requisição será 200 e o corpo retornará os dados do cliente.
+
+Dado que existem usuários cadastrados, quando for realizada a busca por um usuário especificando o ID do cliente, então o status da requisição será 200 e o corpo retornará os dados do cliente.
+
+Dado que existem usuários cadastrados, quando for realizada a tentativa de busca por um usuário não cadastrado, então o status da requisição será 404 e o corpo retornará "Cliente não encontrado"
+
+
+POST
+Dado que não existem usuários cadastrados, quando for realizado um POST para cadastrado de cliente, então o status da requisição será 201 e o corpo retornará os dados do novo cliente cadastrado.
+
+Dado que existem usuários cadastrados, quando for realizado um POST para cadastrado de um novo cliente, então o status da requisição será 201 e o corpo retornará os dados dos clientes cadastrados.
+
+PUT
+Dado que existe um usuário cadastrado, quando for atualizado dados deste usuário, então o status da requisição será 200 e o corpo retornará os dados do cliente atualizado.
+
+Dado que não existem usuários cadastrados, quando for feito uma tentativa de atualizar os dados de um usuário inexistente, então o status da requisição será 404 e o corpo retornará "Cliente não encontrado".
+
+Dado que existem usuários cadastrados, quando for feito uma tentativa de atualizar os dados de um usuário inexistente, então o status da requisição será 404 e o corpo retornará "Cliente não encontrado".
+
+DELETE
+Dado que existem usuário cadastrados, quando for feita a exclusão de um usuário por seu ID, então o status da requisição será 200 e o corpo retornará uma mensagem de usuário excluído.
+
+Dado que não existem usuários cadastrados, quando for feita a tentativa de exclusão de um usuário por seu ID, então o status da requisição será 404 e o corpo retornará "Cliente não encontrado"
+
+Dado que existem usuários cadastrados, quando for feita a tentativa de exclusão de um usuário por seu ID, então o status da requisição será 404 e o corpo retornará "Cliente não encontrado"
+
+DELETE - apagaTodos
+Dado que existem usuários cadastrados, quando for realizada a exclusão de todos os usuários, então o status da requisição será 200 e o corpo estará vazio.
+
+
+/ ou /clientes --> GET clientes: para pegar todos os clientes.
+/cliente/{ID}  --> GET cliente por ID: para pegar um cliente com base no seu id.
+/cliente       --> POST cliente para cadastrar um cliente novo.
+/cliente       --> PUT atualiza cliente já cadastrado previamente.
+/cliente/{ID}  --> DELETE cliente por ID para deletar um cliente por ID.
+/risco/{id}    --> GET cliente por ID com o risco (Basic Authentication)
