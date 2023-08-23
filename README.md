@@ -16,8 +16,13 @@ Após visualização do funcionamento da API, escrevi diversos casos de testes u
 **Java, JUnit5, Hamcrest, RestAssured, Gradle e Postman**
 
 ✅ Para escrita do código: Java
+
 ✅ Para execução dos testes manuais: Postman
+
 ✅ Para execução dos testes automatizados: JUnit5
+
 ✅ Para verificar resultados dos testes: JUnit5 e Hamcrest
+
 ✅ Para simplificar requisições e escrita em Java: RestAssured
+
 ✅ Para gerenciamento de dependências e visualização de relatórios: Gradle
